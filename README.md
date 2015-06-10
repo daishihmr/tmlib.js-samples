@@ -1,9 +1,12 @@
 # tmlib.jsのサンプル
 
-## BASIC 基礎編
+tmlib.jsのバージョンは0.5.0以上
+
+## 基礎編
 
 ### app
 
+* [メイン関数](http://goo.gl/x3bypZ)
 * [アプリケーション初期化]()
 * [LoadingScene]()
 * [tm.game.setup]()
@@ -74,7 +77,9 @@
 
 * [WebSocket]()
 
-## with External Library 他のライブラリと組み合わせ
+## 他のライブラリと組み合わせ
+
+### bulletml.js
 
 ### Three.js
 
