@@ -9,14 +9,14 @@ tmlib.jsのバージョンは0.5.0以上
 * メイン関数 http://goo.gl/x3bypZ
 * アプリケーション初期化 http://goo.gl/hDl5jB
 * LoadingScene 
-* tm ame.setup](
+* tm game.setup
 * addChildTo 
 * fromJSON 
 * Grid 
 
 ### display
 
-* Shape系いろいろ 
+* Shape系いろいろ http://goo.gl/hLlTor
 * Shapeのプロパティいろいろ 
 * 独自Shape 
 * スプライト 
