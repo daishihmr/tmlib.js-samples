@@ -10,8 +10,9 @@
     <script src="http://cdn.rawgit.com/phi-jp/tmlib.js/0.5.2/build/tmlib.js"></script>
     <script>
     tm.main(function() {
-        var app = tm.display.CanvasApp("#world");
+        var app = tm.display.CanvasApp("#world").resize(500, 500);
         app.replaceScene(tm.game.LoadingScene({
+            width: 500, height: 500,
 
             // アセットとして音声をロードする
             assets: {
@@ -28,6 +29,7 @@
         init: function() {
             this.superInit();
 
+            // 音声を再生
             tm.sound.SoundManager.play("voice");
         }
     });
