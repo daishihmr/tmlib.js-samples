@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <canvas id="world"></canvas>
+    <script src="http://cdn.rawgit.com/phi-jp/tmlib.js/0.5.2/build/tmlib.js"></script>
+    <script>
+    tm.main(function() {
+        var app = tm.display.CanvasApp("#world");
+        app.replaceScene(tm.game.LoadingScene({
+
+            // アセットとして音声をロードする
+            assets: {
+                "voice": "../assets/vo_jacms.mp3",
+            },
+
+            nextScene: GameScene
+        }));
+        app.run();
+    });
+
+    tm.define("GameScene", {
+        superClass: "tm.app.Scene",
+        init: function() {
+            this.superInit();
+
+            tm.sound.SoundManager.play("voice");
+        }
+    });
+    </script>
+</body>
+
+</html>
