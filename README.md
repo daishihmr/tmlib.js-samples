@@ -57,7 +57,7 @@ tmlib.jsのバージョンは0.5.0以上
 
 ### sound
 
-* [音をを鳴らす](http://daishihmr.github.io/tmlib.js-samples/samples/sound-playsound.html) ([ソース](view-source:http://daishihmr.github.io/tmlib.js-samples/samples/sound-playsound.html))
+* [音をを鳴らす](http://daishihmr.github.io/tmlib.js-samples/samples/sound-playsound.html) ([ソース](https://github.com/daishihmr/tmlib.js-samples/blob/gh-pages/samples/sound-playsound.html))
 * SoundManager 
 
 ### util
