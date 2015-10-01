@@ -2,38 +2,39 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 </head>
 
 <body>
-    <canvas id="world"></canvas>
-    <script src="http://cdn.rawgit.com/phi-jp/tmlib.js/0.5.2/build/tmlib.js"></script>
-    <script>
-    tm.main(function() {
-        var app = tm.display.CanvasApp("#world").resize(500, 500);
-        app.replaceScene(tm.game.LoadingScene({
-            width: 500, height: 500,
+  <canvas id="world"></canvas>
+  <script src="https://cdn.rawgit.com/daishihmr/tmlib.js/develop/build/tmlib.js"></script>
+  <script>
+  tm.main(function() {
+    var app = tm.display.CanvasApp("#world").resize(500, 500);
+    app.replaceScene(tm.game.LoadingScene({
+      width: 500,
+      height: 500,
 
-            // アセットとして音声をロードする
-            assets: {
-                "voice": "../assets/vo_jacms.mp3",
-            },
+      // アセットとして音声をロードする
+      assets: {
+        "voice": "../assets/vo_jacms.mp3",
+      },
 
-            nextScene: GameScene
-        }));
-        app.run();
-    });
+      nextScene: GameScene
+    }));
+    app.run();
+  });
 
-    tm.define("GameScene", {
-        superClass: "tm.app.Scene",
-        init: function() {
-            this.superInit();
+  tm.define("GameScene", {
+    superClass: "tm.app.Scene",
+    init: function() {
+      this.superInit();
 
-            // 音声を再生
-            tm.sound.SoundManager.play("voice");
-        }
-    });
-    </script>
+      // 音声を再生
+      tm.sound.SoundManager.play("voice");
+    }
+  });
+  </script>
 </body>
 
 </html>

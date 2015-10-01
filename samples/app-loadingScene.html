@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <canvas id="world"></canvas>
+  <script src="https://cdn.rawgit.com/daishihmr/tmlib.js/develop/build/tmlib.js"></script>
+  <script>
+  tm.main(function() {
+    var app = tm.display.CanvasApp("#world").resize(500, 500).run();
+
+    // LoadingSceneを作成
+    var loadingScene = tm.game.LoadingScene({
+
+      // キャンバスのサイズ
+      width: 500,
+      height: 500,
+
+      // ロードするアセット
+      // [名前] : [URL] で指定する
+      assets: {
+
+        // 画像
+        "image": "../assets/fighterC4.png",
+
+        // 音声
+        "voice": "../assets/vo_jacms.mp3",
+
+        // JSON
+        "json": "../assets/data.json",
+      },
+
+      // ロード完了後に遷移するシーン
+      nextScene: MainScene
+    });
+
+    // ロードシーンへ遷移
+    app.replaceScene(loadingScene);
+  });
+
+  tm.define("MainScene", {
+    superClass: "tm.app.Scene",
+
+    init: function() {
+      this.superInit();
+
+      // ロードした画像を表示
+      var image = tm.asset.Manager.get("image");
+      tm.display.Sprite(image).setPosition(250, 250).addChildTo(this);
+
+      // ロードした音声を再生
+      var voice = tm.asset.Manager.get("voice");
+      voice.play();
+
+      // ロードしたJSONを表示
+      var json = tm.asset.Manager.get("json");
+      tm.display.Label(json.data.text).setPosition(250, 120).addChildTo(this);
+    }
+  });
+  </script>
+</body>
+
+</html>

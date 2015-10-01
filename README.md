@@ -6,9 +6,13 @@ tmlib.jsのバージョンは0.5.0以上
 
 ### app
 
-* メイン関数 http://goo.gl/x3bypZ
-* アプリケーション初期化 http://goo.gl/hDl5jB
-* LoadingScene 
+* メイン関数 最初に呼び出される関数
+    * [runstant](http://goo.gl/x3bypZ)
+* アプリケーション初期化 キャンバスアプリケーションを作り、起動する
+    * [runstant](http://goo.gl/hDl5jB)
+* LoadingScene アセットのロードとプログレスバー（とひよこ）を表示する
+    * [ソース](https://github.com/daishihmr/tmlib.js-samples/blob/gh-pages/samples/app-loadingScene.html)
+    * [動作ページ](http://daishihmr.github.io/tmlib.js-samples/samples/app-loadingScene.html)
 * tm game.setup
 * addChildTo 
 * fromJSON 
@@ -16,7 +20,8 @@ tmlib.jsのバージョンは0.5.0以上
 
 ### display
 
-* Shape系いろいろ http://goo.gl/hLlTor
+* Shape系いろいろ
+    * [runstant](http://goo.gl/hLlTor)
 * Shapeのプロパティいろいろ 
 * 独自Shape 
 * スプライト 
@@ -57,7 +62,9 @@ tmlib.jsのバージョンは0.5.0以上
 
 ### sound
 
-* [音をを鳴らす](http://daishihmr.github.io/tmlib.js-samples/samples/sound-playsound.html) ([ソース](https://github.com/daishihmr/tmlib.js-samples/blob/gh-pages/samples/sound-playsound.html))
+* 音をを鳴らす
+    * [ソース](https://github.com/daishihmr/tmlib.js-samples/blob/gh-pages/samples/sound-playsound.html)
+    * [動作ページ](http://daishihmr.github.io/tmlib.js-samples/samples/sound-playsound.html)
 * SoundManager 
 
 ### util
@@ -85,4 +92,5 @@ tmlib.jsのバージョンは0.5.0以上
 
 ### RxJS
 
-* ダブルクリック http://goo.gl/jeK0br
+* ダブルクリック
+    * [runstant](http://goo.gl/jeK0br)
